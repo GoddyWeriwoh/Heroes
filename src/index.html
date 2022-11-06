@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataHeroe 2021</title>
+    <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/pages/index.js" type="module"></script>
+</head>
+<body>
+    <head>
+        <h1>DataHero 2021</h1>
+    </head>
+    <main>
+        <div id="appHeroes">
+            <header>
+                <img src="media/logo.png" id="logo"/>
+                <p id="title"><span class="capital" id="D">D</span>ATA<span class="capital" id="H"> H</span>EROE<span class="capital" id="year"> 2021</span></p> 
+            </header>
+
+            <search-form></search-form>
+            
+            <hero
+            v-for="hero in Heroes"
+            v-bind:key="hero.key"
+            v-bind:name="hero.name"
+            v-bind:role="hero.role"
+            v-bind:portrait="hero.portrait"
+            v-bind:message="hero.message"
+            ></hero>
+                
+        </div>
+    </main>
+</body>
+</html>
